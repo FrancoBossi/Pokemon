@@ -1,0 +1,23 @@
+{
+  "scripts": {
+  "start": "nest start",
+  "start:dev": "nest start --watch"
+}
+,
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "CommonJS",    
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "outDir": "./dist",
+      "rootDir": "./src/api",
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "experimentalDecorators": true,
+  "emitDecoratorMetadata": true
+    },
+    "include": ["src/api/**/*"]
+  }
+  
