@@ -15,7 +15,7 @@ import { BattleService } from '../api/battle.service';
       type: 'sqlite',
       database: 'pokemon.db',
       entities: [Pokemon, Fight],
-      // entities: [__dirname + '/**/*.entity{.ts,.js}'], // alternativa para cargar todas las entidades
+      
       synchronize: true,   // solo en desarrollo
     }),
     TypeOrmModule.forFeature([Pokemon, Fight]),
