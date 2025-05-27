@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Challenge Pokemon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Division de archivos:
+Carpeta api:
 
-Currently, two official plugins are available:
+# Aca se lleva a cabo el back y la gestion de base de datos de proyecto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-Cada entidad sera representada por una tabla en la base de datos.
 
-## Expanding the ESLint configuration
+- en BattleService se gestionan las batallas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Carpeta components:
 
-- Configure the top-level `parserOptions` property like this:
+# Aca se gestionan los componentes de la aplicacion.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+-Cada componente es una parte de la aplicacion que se encarga de una funcionalidad especifica.
+FetchPokemon: Su función es mostrar una lista de Pokémon (cargados desde pokemon.json) como botones con imágenes.
+ShowFighters: Su función es mostrar los Pokémon seleccionados para la batalla.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Como correr el proyecto:
+
+1. Abrir dos terminales.
+2. En la primera terminal, ejecutar el comando `npm run dev` para iniciar el servidor de desarrollo de la API, e ir al link que se genera.
+3. En la segunda terminal, ejecutar el comando `npm run start:api` para correr la API REST (maneja la lógica del juego y la base de datos)
+
+   ![image](imagenesdelmd/image.png)
+   ![image](imagenesdelmd/image2.png)
+
+# Base de datos:
+
+- Se generara una carpeta llamada "pokemon.db".
+- La base de datos se inicializa con dos tablas: "pokemon" y "battles".
+- La tabla "pokemon" contiene los datos de los Pokémon, incluyendo su nombre, tipo, vida, ataque y defensa. Que se leen desde el archivo `pokemon.json`.
+  -La tabla "battles" contiene los datos de las batallas, qeu se irán agregando a medida que se realicen batallas.
+  Para ver el contenido de la base de datos, recomiendo tener la extensión "SQLite Viewer".
