@@ -1,4 +1,3 @@
-// src/app.module.ts
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Pokemon } from './pokemon.entity';
@@ -16,7 +15,7 @@ import { BattleService } from '../api/battle.service';
       database: 'pokemon.db',
       entities: [Pokemon, Fight],
       
-      synchronize: true,   // solo en desarrollo
+      synchronize: true,  
     }),
     TypeOrmModule.forFeature([Pokemon, Fight]),
   ],

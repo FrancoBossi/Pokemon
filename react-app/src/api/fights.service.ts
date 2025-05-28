@@ -1,4 +1,3 @@
-// src/api/fight.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Fight } from './fights.entity';

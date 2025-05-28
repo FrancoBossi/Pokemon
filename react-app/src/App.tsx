@@ -4,7 +4,7 @@ import FetchPokemon from "./components/FetchPokemon";
 import pokemones from './components/pokemon.json';
 import ShowFighters from "./components/ShowFighters";
 import './components/styles.css'
-//import './api.battle.service';
+
 
 interface Pokemon {
   name: string;
@@ -39,11 +39,11 @@ function App() {
     setWinner(null); // Reiniciar el ganador
   };
 
-  // Nueva función para llamar al backend
+
   const handleBattle = async () => {
     if (!selectedPokemon || !rivalSelected) return;
     try {
-      const response = await fetch('http://localhost:3000/api/battle', { // <-- usa /api/battle
+      const response = await fetch('http://localhost:3000/api/battle', { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

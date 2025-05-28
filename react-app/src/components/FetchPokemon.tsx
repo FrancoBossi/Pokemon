@@ -23,7 +23,7 @@ function FetchPokemon({ onSelect }: FetchPokemonProps) {
         pokemones.pokemon.map((pokemon) => (
           <button
             key={pokemon.id}
-            className="m-2 button-spacing" // Aplica espacio entre los botones
+            className="m-2 button-spacing" 
             onClick={() => onSelect({
               name: pokemon.name,
               imageUrl: pokemon.imageUrl,

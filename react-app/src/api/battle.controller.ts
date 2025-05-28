@@ -1,4 +1,3 @@
-// src/api/battle.controller.ts
 import { Controller, Post, Body } from '@nestjs/common';
 import { BattleService, Pokemon } from './battle.service';
 import { FightService } from './fights.service';

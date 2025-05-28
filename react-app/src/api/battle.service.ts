@@ -1,4 +1,3 @@
-// src/api/battle.service.ts
 import { Injectable } from '@nestjs/common';
 
 export interface Pokemon {

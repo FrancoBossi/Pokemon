@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Pokemon {
   @PrimaryGeneratedColumn()
-  dbId!: number; // ID de la DB (auto)
+  dbId!: number; 
 
   @Column()
   name!: string;

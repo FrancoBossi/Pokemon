@@ -47,7 +47,6 @@ function ShowFighters({ selectedPokemon, rivalSelected }: ShowFightersProps) {
         </div>
       </div>
 
-      {/*<div className="fight-button"></div>*/}
 
       {/* Pokémon Rival */}
       <div className="pokemon-card">
